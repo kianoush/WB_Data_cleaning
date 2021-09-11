@@ -29,7 +29,7 @@ director_with_must_movies = pd.DataFrame()
 director_with_must_movies['Director'], director_with_must_movies['Films'] = np.unique(raw_df['Directed by'], return_counts=True)
 
 # Split the movies with two directors
-
+director_with_must_movies['Split_director'] = director_with_must_movies['Director'].str.split(',')
 
 
 print('Done!')
